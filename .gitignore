@@ -1,0 +1,8 @@
+# Don't include dependencies
+node_modules
+
+# Don't include compiled JavaScript files
+bin
+
+# Don't include pkg-generated files
+dist
