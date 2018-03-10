@@ -20,7 +20,12 @@ export default class Util {
 		const page = await browser.newPage();
 
 		// Head over to GitHub
-		await page.goto(`https://github.com/${username}`);
+		const response = await page.goto(`https://github.com/${username}`);
+
+		// Handle request errors
+		if (response === null || !response.ok()) {
+			throw new Error(`Request failed with status code: ${response !== null ? response.status() : null}`);
+		}
 
 		const contributions: IContribution[] = [];
 
