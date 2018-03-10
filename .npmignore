@@ -1,0 +1,5 @@
+# Include compiled bin directory
+!bin/
+
+# Include pkg-ed dist directory
+!dist/

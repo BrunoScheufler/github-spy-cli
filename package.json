@@ -1,11 +1,10 @@
 {
   "name": "github-spy-cli",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Node.js puppeteer-based GitHub contribution spy",
   "bin": "bin/github-spy-cli.js",
   "scripts": {
     "build:ts": "tsc",
-    "build:dist": "npm run build:ts && pkg bin/github-spy-cli.js --out-path dist/",
     "prepare": "npm run build:ts"
   },
   "keywords": [
@@ -20,15 +19,15 @@
     "@types/inquirer": "0.0.37",
     "@types/node": "^9.4.7",
     "@types/puppeteer": "^1.1.0",
-    "pkg": "^4.3.0",
     "typescript": "^2.7.2"
   },
   "dependencies": {
     "chalk": "^2.3.2",
     "inquirer": "^5.1.0",
     "puppeteer": "^1.1.1"
-  },
-  "pkg": {
-    "scripts": "bin/**/*.js"
-  }
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/BrunoScheufler/github-spy-cli.git"
+	}
 }
