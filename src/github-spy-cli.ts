@@ -2,6 +2,7 @@
 
 import inquirer from 'inquirer';
 import chalk from 'chalk';
+import ora from 'ora';
 
 import Util from './util';
 
@@ -31,8 +32,14 @@ import { IPromptResults } from './interfaces/prompts';
 
 		username = promptResults.username ? promptResults.username : username;
 
+		// Create loading indication spinner
+		const spinner = ora({ text: chalk.blue('Loading contributions'), spinner: 'clock' });
+		spinner.start();
+
 		// Retrieve contributions using Puppeteer
 		const contributions = await Util.retrieveContributions(username);
+
+		spinner.succeed(chalk.blue('Loaded contributions'));
 
 		// Calculate and print contributions
 		let contributionCount = 0;
