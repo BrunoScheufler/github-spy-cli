@@ -33,7 +33,10 @@ import { IPromptResults } from './interfaces/prompts';
 		username = promptResults.username ? promptResults.username : username;
 
 		// Create loading indication spinner
-		const spinner = ora({ text: chalk.blue('Loading contributions'), spinner: 'clock' });
+		const spinner = ora({
+			text: chalk.blue('Loading contributions'),
+			spinner: 'clock'
+		});
 		spinner.start();
 
 		// Retrieve contributions using Puppeteer
@@ -67,7 +70,7 @@ import { IPromptResults } from './interfaces/prompts';
 				break;
 		}
 
-		console.log(chalk.bold(chalk.green(`🕵️  ${username} contributed ${contributionCount} awesome things in the ${label}!`)));
+		console.log(chalk.bold(chalk.green(`🕵️ ${username} contributed ${contributionCount} awesome things in the ${label}!`)));
 	} catch (error) {
 		console.error(chalk.redBright(error));
 		process.exit(1);

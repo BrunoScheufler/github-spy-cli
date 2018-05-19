@@ -16,7 +16,6 @@ export default class Util {
 	}
 
 	public static async retrieveContributions(username: string) {
-
 		// Prepare Puppeteer
 		const browser = await puppeteer.launch({ args: os.platform() !== 'win32' ? ['--no-sandbox', '--disable-setuid-sandbox'] : [] });
 		const page = await browser.newPage();

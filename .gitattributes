@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Force linguist to detect TypeScript files as TypeScript, no matter what they include (shebangs, etc.)
+*.ts linguist-language=TypeScript
