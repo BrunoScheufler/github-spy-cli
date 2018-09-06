@@ -42,7 +42,7 @@ import { IPromptResults } from './interfaces/prompts';
 		// Retrieve contributions using Puppeteer
 		const contributions = await Util.retrieveContributions(username);
 
-		spinner.succeed(chalk.blue('Loaded contributions'));
+		spinner.succeed(chalk.blue('🕵️  Loaded contributions'));
 
 		// Calculate and print contributions
 		let contributionCount = 0;
@@ -70,7 +70,7 @@ import { IPromptResults } from './interfaces/prompts';
 				break;
 		}
 
-		console.log(chalk.bold(chalk.green(`🕵️ ${username} contributed ${contributionCount} awesome things in the ${label}!`)));
+		console.log(chalk.bold(chalk.green(`${username} contributed ${contributionCount} awesome things in the ${label}!`)));
 	} catch (error) {
 		console.error(chalk.redBright(error));
 		process.exit(1);
