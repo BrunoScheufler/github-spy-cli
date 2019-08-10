@@ -1,4 +1,4 @@
 export interface IPromptResults {
-	username?: string;
-	timeSpan?: string;
+  username?: string;
+  timeSpan?: string;
 }

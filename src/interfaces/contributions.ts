@@ -1,4 +1,4 @@
 export interface IContribution {
-	date: string;
-	count: number;
+  date: string;
+  count: number;
 }
