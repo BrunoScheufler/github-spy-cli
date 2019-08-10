@@ -1,13 +1,18 @@
 {
 	"name": "github-spy-cli",
-	"version": "1.0.0",
+	"version": "0.0.0-development",
 	"description": "Node.js puppeteer-based GitHub contribution spy",
-	"bin": { "github-spy": "bin/github-spy-cli.js" },
+	"bin": {
+		"github-spy": "bin/github-spy-cli.js"
+	},
 	"scripts": {
-		"cleanup": "rimraf bin",
-		"build:ts": "tsc",
-		"build": "npm run cleanup && npm run build:ts",
-		"prepare": "npm run build:ts"
+		"build": "tsc --project .",
+		"lint:style": "prettier --check src/**/*.ts",
+		"lint:code": "tslint --project .",
+		"lint": "yarn lint:style && yarn lint:code",
+		"watch": "tsc --project . --watch",
+		"test": "echo \"Currently, there are no tests, this placeholder was added so the current step won't fail.\"",
+		"semantic-release": "semantic-release"
 	},
 	"keywords": [
 		"GitHub",
@@ -23,6 +28,8 @@
 		"@types/ora": "1.3.4",
 		"@types/puppeteer": "1.6.3",
 		"rimraf": "2.6.2",
+		"semantic-release": "^15.13.19",
+		"tslint": "^5.18.0",
 		"typescript": "3.0.3"
 	},
 	"dependencies": {
@@ -34,5 +41,13 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/BrunoScheufler/github-spy-cli.git"
+	},
+	"release": {
+		"plugins": [
+			"@semantic-release/commit-analyzer",
+			"@semantic-release/release-notes-generator",
+			"@semantic-release/npm",
+			"@semantic-release/github"
+		]
 	}
 }
