@@ -30,7 +30,7 @@
 		"prettier": "1.18.2",
 		"rimraf": "3.0.0",
 		"semantic-release": "15.13.21",
-		"tslint": "5.18.0",
+		"tslint": "5.19.0",
 		"typescript": "3.0.3"
 	},
 	"dependencies": {
