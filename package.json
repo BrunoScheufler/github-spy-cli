@@ -31,7 +31,7 @@
 		"rimraf": "3.0.0",
 		"semantic-release": "15.13.24",
 		"tslint": "5.19.0",
-		"typescript": "3.0.3"
+		"typescript": "3.6.2"
 	},
 	"dependencies": {
 		"chalk": "2.4.1",
