@@ -29,7 +29,7 @@
 		"@types/puppeteer": "1.20.2",
 		"prettier": "1.19.1",
 		"rimraf": "3.0.0",
-		"semantic-release": "15.13.30",
+		"semantic-release": "15.13.31",
 		"tslint": "5.20.1",
 		"typescript": "3.7.2"
 	},
