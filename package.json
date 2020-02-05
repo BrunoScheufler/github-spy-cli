@@ -37,7 +37,7 @@
 		"chalk": "3.0.0",
 		"inquirer": "7.0.4",
 		"ora": "4.0.3",
-		"puppeteer": "2.1.0"
+		"puppeteer": "2.1.1"
 	},
 	"repository": {
 		"type": "git",
