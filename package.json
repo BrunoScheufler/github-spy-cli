@@ -24,7 +24,7 @@
 	"license": "MIT",
 	"devDependencies": {
 		"@types/inquirer": "6.5.0",
-		"@types/node": "10.17.17",
+		"@types/node": "10.17.18",
 		"@types/ora": "3.1.0",
 		"@types/puppeteer": "2.0.1",
 		"prettier": "1.19.1",
